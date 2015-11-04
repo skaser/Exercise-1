@@ -1,7 +1,7 @@
 ## Python Course exercise 1
 
-This is the repository for the first exercise of 120.050 Introduction to Python
-programming for geoscience. This exercise will be handed in via Github. The
+This is the repository for the first exercise of **120.050 Introduction to Python
+programming for geoscience**. This exercise will be handed in via Github. The
 process of doing this can be daunting for a first time user so we will try to
 provide detailed instructions below and we will also show it during the exercise
 handout.
