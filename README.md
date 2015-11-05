@@ -8,6 +8,11 @@ handout.
 
 ### Instructions
 
+All of the functions you will write during this exercise have a test associated
+with it which can be found in the `tests` folder. If an explanation of what a
+function should do is not completely clear then look at the test function for an
+example of the expected output.
+
 #### Git Background
 
 You can find numerous tutorials about the Git basics on the web. A first start
@@ -35,7 +40,7 @@ To complete the exercise follow these steps:
    instructions about the things you have to program to make all the tests pass.
 9. Write code and commit your changes to git.
 10. Push your commits to Github
-11. Repeat 9. and 10. as often as necessary.
+11. Repeat 8. to 10. as often as necessary.
 
 #### Hand in
 
