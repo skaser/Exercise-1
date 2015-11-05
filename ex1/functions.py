@@ -34,6 +34,8 @@ https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt
 '''
 
 # Example so that you can see a passing test
+
+
 def f():
     """Returns the string 'success'
     """
@@ -49,3 +51,14 @@ def f():
 
 # Define a function named check_n that check is a number is greater than n. The
 # number should be the first argument and n the second
+
+# Define a function named check_list that takes two arguments. The first
+# argument is a list of numbers and the second argument is the number n to
+# compare against. The function should return a list with equal length as the
+# input list containing for each number in the original list either True or
+# False if the number was greater than or equal to n.
+
+# Define a function named check_list_nth that does the same as check_list but
+# uses every nth element of the input list. You will need a third input
+# argument.
+
