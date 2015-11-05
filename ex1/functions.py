@@ -59,6 +59,14 @@ def f():
 # False if the number was greater than or equal to n.
 
 # Define a function named check_list_nth that does the same as check_list but
-# uses every nth element of the input list. You will need a third input
-# argument.
+# uses every nth element of the input list (including the first one). You will
+# need a third input argument.
+
+# Define a function named add_new_list that takes two inputs. A list l and a
+# second variable x to add to the list. Return a new list containing x as the
+# last element without modifying the original list.
+
+# Define a function named remove_nth that takes a list and removes every nth
+# element (including the first one). Use a keyword named nth to set the default
+# value for nth to 2.
 

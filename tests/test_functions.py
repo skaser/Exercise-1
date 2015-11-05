@@ -80,3 +80,16 @@ def test_check_list_nth():
                                             False, False]
 
 
+def test_add_new_list():
+    l = [1, 3]
+    ls = func.add_new_list(l, 'test')
+    assert ls == [1, 3, 'test']
+    assert l == [1, 3]
+
+
+def test_remove_nth():
+    l = [1, 3, 4, 5, 34, 67, -34, -4]
+    assert func.remove_nth(l, 2) == [3, 5, 67, -4]
+    assert func.remove_nth(l) == func.remove_nth(l, 2)
+    assert func.remove_nth(l, 1) == []
+    assert func.remove_nth(l, nth=3) == [3, 4, 34, 67, -4]
