@@ -44,3 +44,12 @@ def test_search_n():
     with pytest.raises(ValueError):
         x1 = 23
         ex.search_n(l, x1)
+
+
+def test_safe_divide():
+    assert ex.safe_divide(1, 1) == 1
+    assert ex.safe_divide(3.6, 3) == 1.2
+    assert ex.safe_divide(3.6, 0) == None
+    assert ex.safe_divide("2", 0) == None
+    assert ex.safe_divide("2", "4") == None
+    assert ex.safe_divide([2], 0) == None
