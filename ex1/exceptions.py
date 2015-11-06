@@ -38,8 +38,11 @@ Module for testing exception handling
 # also named search_n. The function should do the same as functions.search_n
 # but if the variable is not found in the list then raise a ValueError.
 
+########################
+# Excepting Exceptions #
+########################
+
 # Define a function called safe_divide which takes two arguments and divides
 # the first by the second. This function should handle exceptions that might
 # occur print out what went wrong and return None if no results could be
 # computed.
-
