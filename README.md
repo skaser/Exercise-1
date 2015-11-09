@@ -53,6 +53,10 @@ Opening a PR will automatically run the test scripts so that we can both see if
 the tests pass, or why they fail. The PR also allows us to review your code and
 give comments on the implementation.
 
+#### Hand in date
+
+Please open a Pull Request by the 30th of November.
+
 #### Grading
 
 The grade for this exercise will be 80 % based on the percentage of passed tests
