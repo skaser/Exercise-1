@@ -101,11 +101,19 @@ def add_new_list(l,x):
 # Define a function named remove_nth that takes a list and removes every nth
 # element (including the first one). Use a keyword named nth to set the default
 # value for nth to 2.
+def remove_nth(list,nth=2):
+	del list[0::nth]
+	return list
 
 # Define a function named search_n that takes a list and a variable x and
 # searches for x in the list. If the variable is found return the index of the
 # variable in the list and the variable. Otherwise use None for both return
 # values
+def search_n(list,x):
+	if x in list:
+		return(list.index(x), x)
+	else:
+		return(None,None)
 
 ################
 # Dictionaries #
@@ -114,10 +122,19 @@ def add_new_list(l,x):
 # Define a function named args_to_dict that takes three arguments and returns a
 # dictionary with the position of the argument as the key (starting at 0) and
 # the argument as the value.
+def args_to_dict(a,b,c):
+	return {0:a,1:b,2:c}
 
 # BONUS: Write a function named args_to_dict_general that does the same for any
 # number of arguments
-
+def args_to_dict_general(*args):
+	d = {}
+	i = 0
+	for arg in args:
+		d[i] = arg
+		i+=1
+	return d
+	
 # Define a function named lists_to_dict that takes two lists of equal lenght
 # named keys and values and builds a dictionary out of them.
 
