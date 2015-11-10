@@ -30,15 +30,36 @@
 Exercises for using the datetime and the calendar module
 '''
 
+from calendar import isleap
+from datetime import date,time,datetime
+
 # Define a function named last_of_month that takes an argument dt of type date
 # and returns a date object representing the last day of the month dt was in.
 
+def last_of_month(dt):
+	if dt.month == 1 or dt.month == 3 or dt.month == 5 or dt.month == 7 or dt.month == 8 or dt.month == 10 or dt.month == 12:
+		return date(dt.year,dt.month,31)
+	elif dt.month == 4 or dt.month == 6 or dt.month == 9 or dt.month == 11:
+		return date(dt.year,dt.month,30)
+	elif dt.month == 2 and isleap(dt.year) == True:
+		return date(dt.year,dt.month,29)
+	elif dt.month == 2 and isleap(dt.year) == False:
+		return date(dt.year,dt.month,28)
+	
 # Define a function named feed_the_gremlin which takes a time object as an
 # argument. It should return False between midnight and 6:30AM and True
 # otherwise.
+
+def feed_the_gremlin(timegiven):
+	if timegiven.hour >= 6 and timegiven.minute >= 30:
+		return True
+	else:
+		return False
 
 # Define a function named how_long that takes two datetime objects dt and ref
 # where ref is the reference datetime, calculates the difference between them and
 # returns the difference as a string formatted like:
 # "01 days, 01 minutes, 01 seconds until 2000-12-31 15:59:59"
 # If ref is before dt then use 'since' instead of 'until'
+
+#def how_long(dt,ref):
