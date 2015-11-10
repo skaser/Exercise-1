@@ -31,7 +31,7 @@ Exercises for using the datetime and the calendar module
 '''
 
 from calendar import isleap
-from datetime import date,time,datetime
+from datetime import date,time,datetime,timedelta
 
 # Define a function named last_of_month that takes an argument dt of type date
 # and returns a date object representing the last day of the month dt was in.
@@ -62,4 +62,15 @@ def feed_the_gremlin(timegiven):
 # "01 days, 01 minutes, 01 seconds until 2000-12-31 15:59:59"
 # If ref is before dt then use 'since' instead of 'until'
 
-#def how_long(dt,ref):
+def how_long(dt,ref):
+	if dt < ref:
+		delta = ref-dt
+		dmin = (delta.seconds//60)
+		dsec = (delta.seconds-(dmin*60))
+		output = "{} days, {} minutes, {} seconds until {}".format(delta.days,dmin,dsec,ref)
+	else:
+		delta = dt-ref
+		dmin = (delta.seconds//60)
+		dsec = (delta.seconds-(dmin*60))
+		output = "{} days, {} minutes, {} seconds since {}".format(delta.days,dmin,dsec,ref)
+	return output
