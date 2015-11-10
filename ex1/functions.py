@@ -34,8 +34,6 @@ https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt
 '''
 
 # Example so that you can see a passing test
-
-
 def f():
     """Returns the string 'success'
     """
@@ -46,15 +44,31 @@ def f():
 ##############################
 
 # Define a function named add that takes two numbers and returns the sum.
-
+def add(a,b):
+	return a+b
+	
 # Define a function named to_tuple that takes three arguments and returns a
 # tuple of these three arguments.
 
+def to_tuple(a,b,c):
+	return (a,b,c)
+
 # Define a function named check5 that checks if a number is greater than 5 and
 # returns True or False.
+def check5(n):
+	if n > 5:
+		return True
+	else:
+		return False
 
 # Define a function named check_n that check is a number is greater than n. The
 # number should be the first argument and n the second
+def check_n(i,n):
+	if i > n:
+		return True
+	else:
+		return False
+
 
 #########
 # LISTS #
@@ -65,14 +79,24 @@ def f():
 # compare against. The function should return a list with equal length as the
 # input list containing for each number in the original list either True or
 # False if the number was greater than or equal to n.
+def check_list(list,n):
+	result = [x >= n for x in list]
+	return result
 
 # Define a function named check_list_nth that does the same as check_list but
 # uses every nth element of the input list (including the first one). You will
 # need a third input argument.
+def check_list_nth(list,n,step):
+	result = [x >= n for x in list[0::step]]
+	return result
 
 # Define a function named add_new_list that takes two inputs. A list l and a
 # second variable x to add to the list. Return a new list containing x as the
 # last element without modifying the original list.
+def add_new_list(l,x):
+	newl = l.copy()
+	newl.append(x)
+	return newl
 
 # Define a function named remove_nth that takes a list and removes every nth
 # element (including the first one). Use a keyword named nth to set the default
