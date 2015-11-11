@@ -163,7 +163,7 @@ def dict_to_string(d,string):
 	for x in d.values():
 		if type(x) == str:
 			output += x + string
-		return output[1:len(output)-1]
+	return output[1:len(output)-1]
 	
 # Define a function named classify_by_type which takes a list l and returns a
 # dictionary d. The d must have the keys 'int' and 'str' which contain the
