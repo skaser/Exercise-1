@@ -102,8 +102,9 @@ def add_new_list(l,x):
 # element (including the first one). Use a keyword named nth to set the default
 # value for nth to 2.
 def remove_nth(list,nth=2):
-	del list[0::nth]
-	return list
+	newl = list.copy()
+	del newl[0::nth]
+	return newl
 
 # Define a function named search_n that takes a list and a variable x and
 # searches for x in the list. If the variable is found return the index of the
@@ -137,19 +138,33 @@ def args_to_dict_general(*args):
 	
 # Define a function named lists_to_dict that takes two lists of equal lenght
 # named keys and values and builds a dictionary out of them.
-
+def lists_to_dict(keys,values):
+	return dict(zip(keys,values))
+	
 # Define a function named search_list that takes two lists a and b. The
 # function searches for all elements of b in list a. The return value should be
 # a dictionary containing the index of the found element of b in list a and the
 # value of the found element. If nothing was found then return an empty
 # dictionary.
-
+def search_list(a,b):
+	d = {}
+	for x in a:
+		if x in b:
+			d[a.index(x)] = x
+	return d
+			
 # Define a function named dict_to_string that takes a dictionary and a
 # separator string. The function should only take elements out of the
 # dictionary whose value is a string and then return a single string containing
 # the strings stored in the dictionary seperated by the separator string.
 # Return an empty string if there are no strings in the dictionary.
-
+def dict_to_string(d,string):
+	output = ' '
+	for x in d.values():
+		if type(x) == str:
+			output += x + string
+		return output[1:len(output)-1]
+	
 # Define a function named classify_by_type which takes a list l and returns a
 # dictionary d. The d must have the keys 'int' and 'str' which contain the
 # elements out of l that have this type. Elements that do not fit one of these
