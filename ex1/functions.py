@@ -169,3 +169,18 @@ def dict_to_string(d,string):
 # dictionary d. The d must have the keys 'int' and 'str' which contain the
 # elements out of l that have this type. Elements that do not fit one of these
 # two types should be stored in a list under the key 'others'
+def classify_by_type(l):
+	list_i = [None]
+	list_s = [None]
+	list_o = [None]
+	for x in l:
+		if type(x) == int:
+			list_i.append(x)
+		elif type(x) == str:
+			list_s.append(x)
+		else:
+			list_o.append(x)
+	del list_i[0]
+	del list_s[0]
+	del list_o[0]		
+	return {'int': list_i,'str': list_s,'others': list_o}
