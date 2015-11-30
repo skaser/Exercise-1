@@ -32,13 +32,31 @@ Exercises for using the datetime and the calendar module
 
 # Define a function named last_of_month that takes an argument dt of type date
 # and returns a date object representing the last day of the month dt was in.
+import datetime
 
+def last_of_month(dt):
+    return(dt.replace(month = dt.month + 1, day = 1) - datetime.timedelta(days = 1))
 # Define a function named feed_the_gremlin which takes a time object as an
 # argument. It should return False between midnight and 6:30AM and True
 # otherwise.
-
+def feed_the_gremlin(time):
+    if time > datetime.time(0,0) and time < datetime.time(6,30):
+        return False
+    else:
+        return True
 # Define a function named how_long that takes two datetime objects dt and ref
 # where ref is the reference datetime, calculates the difference between them and
 # returns the difference as a string formatted like:
 # "01 days, 01 minutes, 01 seconds until 2000-12-31 15:59:59"
 # If ref is before dt then use 'since' instead of 'until'
+def how_long(dt, ref):
+    if dt < ref:
+        diff = ref - dt
+        x = 'until'
+    elif dt > ref:
+        diff = dt - ref
+        x = 'since'
+    minutes = int(diff.seconds/60)
+    seconds = round((diff.seconds/60 - int(diff.seconds/60))*60)
+    mstr = str(diff.days) + ' days, ' + str(minutes) + ' minutes, ' + str(seconds) + ' seconds ' + x + ' ' + str(ref)
+    return mstr
